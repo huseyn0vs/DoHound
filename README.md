@@ -12,7 +12,6 @@ All lookups are performed asynchronously for speed, with colored output and opti
 - Concurrent DNS resolution with retries
 - Progress bars for long runs
 - Colored, human-friendly output
-- ASCII banner (requires `figlet`)
 
 ## Requirements
 - Python **3.8**
