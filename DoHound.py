@@ -45,10 +45,10 @@ async def resolve_ip(subdomain, loop, retries=2):
             ip = info[0][4][0]
             return subdomain, ip
         except Exception as e:
-            # last attempt -> return None
+            
             if attempt == retries:
                 return subdomain, None
-            await asyncio.sleep(0.3)  # small backoff
+            await asyncio.sleep(0.3) 
 
 # -------------------------------
 # FETCH SUBDOMAINS FROM CRT.SH
@@ -71,7 +71,7 @@ async def fetch_crtsh(domain, http_timeout):
                         sub = sub.strip()
                         if not sub:
                             continue
-                        # Only include subdomains that end with the domain
+                        
                         if sub.endswith(domain):
                             subs.add(sub)
         except Exception as e:
@@ -100,8 +100,6 @@ async def resolve_list(subdomains, loop, concurrency=50, retries=2, label="Resol
             res = await fut
             results.append(res)
         except Exception as e:
-            # This shouldn't normally happen because resolve_ip catches exceptions,
-            # but we handle it defensively.
             logger.debug(f"Task exception: {e}")
             results.append((None, None))
     return results
@@ -175,7 +173,6 @@ async def main():
             logger.error(f"Error reading wordlist: {e}")
 
     # --- Dedupe and Sort ---
-    # convert found into dict to keep best-known IP (if any)
     summary = {}
     for sub, ip in found:
         if sub is None:
