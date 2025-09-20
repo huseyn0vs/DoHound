@@ -126,7 +126,7 @@ async def main():
     # --- Banner ---
     print_banner("DoHound")
     print(Fore.CYAN + "[+] Async Subdomain Enumerator")
-    print(Fore.CYAN + "[+] Author: Huseynov Suleyman | GitHub: your_repo\n")
+    print(Fore.CYAN + "[+] Author: Huseynov Suleyman | GitHub: github.com/huseyn0vs/DoHound")
 
     # --- Argument Parser ---
     parser = argparse.ArgumentParser(description="DoHound - Async Subdomain Enumerator")
