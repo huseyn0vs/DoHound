@@ -12,32 +12,30 @@ All lookups are performed asynchronously for speed, with colored output and opti
 - Concurrent DNS resolution with retries
 - Progress bars for long runs
 - Colored, human-friendly output
-- Save results to a file **only if `-o` is specified**
 - ASCII banner (requires `figlet`)
 
 ## Requirements
 - Python **3.8+**
-- System: Linux / macOS / WSL
+- System: Linux / MacOS / Windows
 - Dependencies:
   ```bash
   pip install aiohttp colorama tqdm
   ```
-- Optional: `figlet` (`sudo apt install figlet`)
 
 ## Usage
 Basic usage:
 ```bash
-python3 DoHound -u example.com
+python3 DoHound.py -u example.com
 ```
 
 Save results to file:
 ```bash
-python3 DoHound -u example.com -o subs.txt
+python3 DoHound.py -u example.com -o subs.txt
 ```
 
 Brute-force with wordlist:
 ```bash
-python3 DoHound -u example.com -w wordlist.txt -o found.txt
+python3 DoHound.py -u example.com -w wordlist.txt -o found.txt
 ```
 
 Common options:
