@@ -15,7 +15,7 @@ All lookups are performed asynchronously for speed, with colored output and opti
 - ASCII banner (requires `figlet`)
 
 ## Requirements
-- Python **3.8+**
+- Python **3.8**
 - System: Linux / MacOS / Windows
 - Dependencies:
   ```bash
