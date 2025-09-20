@@ -134,7 +134,7 @@ async def main():
     parser.add_argument("--brute-only", action="store_true", help="Only brute-force using wordlist")
     parser.add_argument("-o", "--output", default=None, help="Output file name")
     parser.add_argument("--concurrency", type=int, default=50, help="Max concurrent DNS requests (default: 50)")
-    parser.add_argument("--timeout", type=int, default=10, help="HTTP request timeout in seconds (default: 10)")
+    parser.add_argument("--timeout", type=int, default=5, help="HTTP request timeout in seconds (default: 5)")
     parser.add_argument("--retries", type=int, default=2, help="DNS resolve retry attempts (default: 2)")
 
     args = parser.parse_args()
