@@ -46,7 +46,7 @@ Common options:
 --brute-only     Only brute-force
 -o, --output     Save results to this file
 --concurrency    Max concurrent DNS requests (default: 50)
---timeout        HTTP request timeout in seconds (default: 10)
+--timeout        HTTP request timeout in seconds (default: 5)
 --retries        DNS retries per subdomain (default: 2)
 ```
 
