@@ -63,6 +63,5 @@ Common options:
 - Intended for **authorized security testing and research only**.
 
 ## License
-MIT License.  
-Use responsibly and only on domains you own or have permission to test.
+MIT License.
 
